@@ -33,3 +33,31 @@ add exampleIntVariable anotherIntVariable //Adds the value of anotherIntVariable
 
 **sub *variable* *'variable/value'*** //Same as add but for subtraction <br>
 
+**exec *functionName()*** //Executes a Python function from user_functions/customFunctions.py <br<
+//Note: The default BulbScript variable 'returned' will be set to whatever the custom function returns
+
+**print** //Prints out whatever comes after it <br>
+ex. 'print Hello World!' //Prints out "Hello World!" <br>
+ex. 'print The value of X is \*X\*' //Prints out "The value of X is " followed by the value of the variable 'X' <br>
+
+**rnd *variable* *int* *int*** <br>
+ex. 'rnd exampleIntVariable 0 500' //Sets the value of exampleIntVariable to a random number between 0 and 500 <br>
+
+**if** and **end if** //Starts and ends an If Statement <br>
+```
+if x == 255 //Checks if x is equal to 255
+mov y x //Sets the value of y to the value of x (255)
+mov x 0  //Sets x to 0
+end if //Ends the if statement
+```
+**func**, **end func**, and **call** //Starts, ends, and calls a function <br>
+
+```
+func lightsOff
+setoff all
+end func
+
+call lightsOff
+```
+
+**stop**  //Stops the script so it will not loop indefinitely 
