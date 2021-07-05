@@ -26,3 +26,10 @@ ex. 'var exampleStringVariable = Hello World!' <br>
 **mov *variable* *'variable/value'*** <br>
 mov exampleIntVariable 50 //Sets the value of exampleIntVariable to 50 <br>
 mov exampleIntVariable exampleFloatVariable //Sets the value of exampleIntVariable to the value of exampleFloatVariable <br>
+
+**add *variable* *'variable/value'*** <br>
+add exampleIntVariable 50 //Adds 50 to the value of exampleIntVariable <br>
+add exampleIntVariable anotherIntVariable //Adds the value of anotherIntVariable to the value of exampleIntVariable <br>
+
+**sub *variable* *'variable/value'*** //Same as add but for subtraction <br>
+
