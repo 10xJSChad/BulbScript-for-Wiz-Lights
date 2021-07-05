@@ -67,6 +67,7 @@ rnd exampleIntVariable 0 500 //Sets the value of exampleIntVariable to a random 
 ```
 
 **if** and **end if** //Starts and ends an If Statement <br>
+*Supported operators:* ==, >=, <=, >, <, !=
 ```
 if x == 255 //Checks if x is equal to 255
 mov y x //Sets the value of y to the value of x (255)
