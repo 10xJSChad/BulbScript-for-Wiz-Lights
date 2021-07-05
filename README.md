@@ -81,7 +81,7 @@ func lightsOff
 setoff all
 end func
 
-call lightsOff
+call lightsOff //calls lightsOff once, 'call lightsOff 2' would call it twice.
 ```
 
 **stop**  //Stops the script so it will not loop indefinitely 
