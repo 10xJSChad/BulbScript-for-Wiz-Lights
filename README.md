@@ -33,7 +33,7 @@ The interpreter expects you to write your code formatted exactly as in the examp
 - BulbScript function arguments and return values, however, you can still pass BulbScript values to a custom Python function and get the returned value
 - Indentation. This will likely be fixed in the near future.
 
-<h2>📖BulbScript Commands/Functions</h2>
+<h2>📖BulbScript Commands</h2>
 
 **setrgb *'all/index of light'* (R, G, B)** <br>
 ```
