@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/48174610/124540634-1f470580-de20-11eb-8816-4348a8196326.png" width="500" height="175"/>
+<img src="https://user-images.githubusercontent.com/48174610/124542297-6e426a00-de23-11eb-9773-1b588890f6d5.png" width="75%" height="75%"/>
 
 # BulbScript for Wiz Lights
 
