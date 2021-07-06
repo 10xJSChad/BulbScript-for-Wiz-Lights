@@ -1,4 +1,7 @@
+<img src="https://user-images.githubusercontent.com/48174610/124540634-1f470580-de20-11eb-8816-4348a8196326.png" width="500" height="175"/>
+
 # BulbScript for Wiz Lights
+
 
 BulbScript is a simple scripting language used to control Philips Wiz Lightbulbs using the [pywizlight](https://github.com/sbidy/pywizlight) library. <br>
 BulbScript can be used to *very quickly* create intricate lightbulb sequences with the help of functions, variables, and conditional statements, all without having to write any Python code. However, BulbScript also supports executing and getting returned values from custom Python functions, for those who are looking to create more advanced light sequences and routines.
