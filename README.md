@@ -9,7 +9,7 @@ This script and several other example scripts can be found in /BulbScript_script
 
 <h3>Dependencies</h3>
 
-• [pywizlight](https://github.com/sbidy/pywizlight)
+- [pywizlight](https://github.com/sbidy/pywizlight)
 
 <h2>💡Using BulbScript</h2>
 1. Configure your broadcast space in config.py. (Default: "192.168.1.255") <br>
