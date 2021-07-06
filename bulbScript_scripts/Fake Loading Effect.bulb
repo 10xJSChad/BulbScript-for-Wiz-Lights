@@ -1,0 +1,33 @@
+//A fun 'loading' effect
+
+func fakeLoad //Declares a function
+setwhite 2 cold 255 //Sets the light at the index of 2 to cold white, with a brightness of 255
+slp 0.05 //Sleep for 0.05 seconds
+setoff all //Turns all the lights off
+slp 0.05 //The rest is the same but for different lights
+setwhite 4 cold 255
+slp 0.05
+setoff all
+slp 0.05
+setwhite 3 cold 255
+slp 0.05
+setoff all
+slp 0.05
+setwhite 1 cold 255
+slp 0.05
+setoff all
+slp 0.05
+end func //Ends the function
+
+func loadFinished
+setwhite all cold 255
+slp 0.2
+setoff all
+slp 0.2
+end func
+
+call fakeLoad 5 //Calls the function 'fakeLoad' 5 times
+call loadFinished 3
+setwhite all cold 255
+
+stop //Stops the script so it will not loop

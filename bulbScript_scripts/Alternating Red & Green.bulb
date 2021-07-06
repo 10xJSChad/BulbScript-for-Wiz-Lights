@@ -1,0 +1,30 @@
+//A script that makes the lights alternate between red and green
+
+var red = 255 
+var green = 0 //Declares the variables 'red', 'green', and 'blue'
+var blue = 0 
+
+mov red 255 
+mov green 0 //Sets these values to 255, 0, and 0 respectively
+mov blue 0 //The reason I set their values to the same values initially assigned to them is
+//because variables are NOT reset every time the script loops
+//The only way to make the variables have the same value every time the script loops is to set their valuables after they're declared
+
+func applyColor //Declares the function 'applyColor'
+setrgb all (red, green, blue) //Sets the rgb value of all lights
+end func //Ends the funcion
+
+call applyColor //Calls the function
+
+slp 1 //Waits for a second
+
+if red == 255 //Checks if red is equal to 255
+mov green red //Sets the value of green to the value of red (255)
+mov red 0  //Sets red to 0
+end if //Ends the if statement
+
+call applyColor //Calls the applyColor function again, setting all the lights to green
+
+slp 1 //Waits a second
+
+

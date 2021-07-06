@@ -1,0 +1,9 @@
+//This is the script shown on the GitHub repo
+setrgb all (255, 0, 0)
+slp 1
+setrgb all (255, 0, 255)
+slp 1
+setrgb all (0, 0, 255)
+slp 1
+setrgb all (255, 255, 0)
+slp 1
