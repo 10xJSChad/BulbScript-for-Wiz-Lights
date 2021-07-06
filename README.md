@@ -3,8 +3,16 @@
 BulbScript is a simple scripting language used to control Philips Wiz Lightbulbs using the [pywizlight](https://github.com/sbidy/pywizlight) library. <br>
 BulbScript can be used to *very quickly* create intricate lightbulb sequences with the help of functions, variables, and conditional statements, all without having to write any Python code. However, BulbScript also supports executing and getting returned values from custom Python functions, for those who are looking to create more advanced light sequences and routines.
 
+<img src="https://user-images.githubusercontent.com/48174610/124525483-bf406700-ddff-11eb-8f87-406c2870df9e.gif" width="400" height="250"/>
+This script and several other example scripts can be found in /BulbScript_scripts
 
 
+<h3>Dependencies</h3>
+
+• [pywizlight](https://github.com/sbidy/pywizlight)
+
+<h2>Using BulbScript</h2>
+1. Configure your broadcast space in config.py. (Default: "192.168.1.255")
 <h2>BulbScript Commands/Functions</h2>
 
 
@@ -61,7 +69,7 @@ add exampleIntVariable anotherIntVariable //Adds the value of anotherIntVariable
 
 **sub *variable* *'variable/value'*** //Same as add but for subtraction <br>
 
-**exec *functionName()*** //Executes a Python function from user_functions/customFunctions.py <br<
+**exec *functionName()*** //Executes a Python function from /user_functions/customFunctions.py <br<
 //Note: The default BulbScript variable 'returned' will be set to whatever the custom function returns
 
 **print** //Prints out whatever comes after it <br>
