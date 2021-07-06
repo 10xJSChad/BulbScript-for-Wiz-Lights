@@ -11,13 +11,13 @@ This script and several other example scripts can be found in /BulbScript_script
 
 • [pywizlight](https://github.com/sbidy/pywizlight)
 
-<h2>Using BulbScript</h2>
+<h2>💡Using BulbScript</h2>
 1. Configure your broadcast space in config.py. (Default: "192.168.1.255") <br>
 2. Run interpreter.py, this will execute the default BulbCode.bulb script. If your lights start slowly turning off and on, your broadcast space is set correctly. <br>
 3. Create your own BulbScript script! Simply navigate to the /bulbScript_scripts directory and create a new .bulb file. Then open it in your favorite text editor and start coding! Make sure to read the documentation below and check out the other example script in the /bulbScript_scripts directory if you're struggling.<br>
 4. Set the "loadedScript" variable in config.py to your new bulb script, and run interpreter.py. If everything is configured correctly, your script will be successfully executed. The script will infinitely loop until it hits a "stop" command. <br>
  
-<h2>BulbScript Limitations</h2>
+<h2>⚠️BulbScript Limitations</h2>
 
 As BulbScript is a small and simple interpreted scripting language with the sole purpose of controlling lightbulbs, it does not come packed with 'quality of life' features.
 The interpreter expects you to write your code formatted exactly as in the example scripts and in many cases will ignore an incorrectly formatted line of code instead of throwing an exception.
@@ -30,7 +30,7 @@ The interpreter expects you to write your code formatted exactly as in the examp
 - BulbScript function arguments and return values, however, you can still pass BulbScript values to a custom Python function and get the returned value
 - Indentation. This will likely be fixed in the near future.
 
-<h2>BulbScript Commands/Functions</h2>
+<h2>📖BulbScript Commands/Functions</h2>
 
 **setrgb *'all/index of light'* (R, G, B)** <br>
 ```
