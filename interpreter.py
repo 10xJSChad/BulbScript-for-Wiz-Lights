@@ -11,6 +11,7 @@ funcCode = []
 recordCode = False
 skip = False
 
+#Strips leading spaces
 def stripSpaces(cmd):
     return(cmd.lstrip())
 
@@ -19,12 +20,12 @@ async def initialize(script):
     await parseCode(script)
     
 async def parseCommand(cmd):
-    cmd = stripSpaces(cmd)
     global funcName, funcCode, recordCode, skip
+    cmd = stripSpaces(cmd) #Strips leading spaces
     cmdUnchanged = cmd
-    cmd = cmd.split("//")[0]   
-    cmd = cmd.lower()
-    splitCmd = cmd.split(" ")
+    cmd = cmd.split("//")[0] #Strips everything following "//" in a line, so "//" may be used to write comments in BulbScript scripts.
+    cmd = cmd.lower() #Converts the line to lowercase to prepare it for further parsing
+    splitCmd = cmd.split(" ") #Splits the string by space to prepare for further parsing
     if splitCmd[0] == "end" and splitCmd[1] == "if" and skip == True:
         skip = False 
     if skip: return
