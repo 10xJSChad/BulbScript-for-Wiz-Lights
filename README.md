@@ -20,7 +20,7 @@ This script and several other example scripts can be found in /BulbScript_script
 3. Create your own BulbScript script! Simply navigate to the /bulbScript_scripts directory and create a new .bulb file. Then open it in your favorite text editor and start coding! Make sure to read the documentation below and check out the other example script in the /bulbScript_scripts directory if you're struggling.<br>
 4. Set the "loadedScript" variable in config.py to your new bulb script, and run interpreter.py. If everything is configured correctly, your script will be successfully executed. The script will infinitely loop until it hits a "stop" command. <br>
  
-<h3>Note: The BulbScript interpreter now supports indentation in BulbScript scripts!</h3> <br>
+<h3>Note: BulbScript now supports indentation in scripts!</h3> <br>
 
 <h2>⚠️BulbScript Limitations</h2>
 
