@@ -20,6 +20,8 @@ This script and several other example scripts can be found in /BulbScript_script
 3. Create your own BulbScript script! Simply navigate to the /bulbScript_scripts directory and create a new .bulb file. Then open it in your favorite text editor and start coding! Make sure to read the documentation below and check out the other example script in the /bulbScript_scripts directory if you're struggling.<br>
 4. Set the "loadedScript" variable in config.py to your new bulb script, and run interpreter.py. If everything is configured correctly, your script will be successfully executed. The script will infinitely loop until it hits a "stop" command. <br>
  
+<h3>Note: The BulbScript interpreter now supports indentation in BulbScript scripts!</h3> <br>
+
 <h2>⚠️BulbScript Limitations</h2>
 
 As BulbScript is a small and simple interpreted scripting language with the sole purpose of controlling lightbulbs, it does not come packed with 'quality of life' features.
@@ -31,7 +33,6 @@ The interpreter expects you to write your code formatted exactly as in the examp
 - Booleans. I did not see a point in implementing this, as integers will get the same job done.
 - For Loops. However, a simple workaround can be found in "Loop Example.bulb".
 - BulbScript function arguments and return values, however, you can still pass BulbScript values to a custom Python function and get the returned value
-~~- Indentation. This will likely be fixed in the near future.~~ BulbScript now supports indentation in scripts!
 - Nested functions (but it does support nested conditionals!)
 
 <h2>📖BulbScript Commands</h2>
