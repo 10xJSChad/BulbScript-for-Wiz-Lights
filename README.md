@@ -31,7 +31,7 @@ The interpreter expects you to write your code formatted exactly as in the examp
 - Booleans. I did not see a point in implementing this, as integers will get the same job done.
 - For Loops. However, a simple workaround can be found in "Loop Example.bulb".
 - BulbScript function arguments and return values, however, you can still pass BulbScript values to a custom Python function and get the returned value
-- Indentation. This will likely be fixed in the near future.
+~~- Indentation. This will likely be fixed in the near future.~~ BulbScript now supports indentation in scripts!
 - Nested functions (but it does support nested conditionals!)
 
 <h2>📖BulbScript Commands</h2>
