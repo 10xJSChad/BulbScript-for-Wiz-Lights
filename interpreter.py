@@ -11,11 +11,16 @@ funcCode = []
 recordCode = False
 skip = False
 
+def stripSpaces(cmd):
+    return(cmd.lstrip())
+
 async def initialize(script):
     await bulbSet.initialize(config.broadcastSpace)
     await parseCode(script)
     
 async def parseCommand(cmd):
+    cmd = stripSpaces(cmd)
+    print(cmd)
     global funcName, funcCode, recordCode, skip
     cmdUnchanged = cmd
     cmd = cmd.split("//")[0]   
