@@ -20,7 +20,6 @@ async def initialize(script):
     
 async def parseCommand(cmd):
     cmd = stripSpaces(cmd)
-    print(cmd)
     global funcName, funcCode, recordCode, skip
     cmdUnchanged = cmd
     cmd = cmd.split("//")[0]   
