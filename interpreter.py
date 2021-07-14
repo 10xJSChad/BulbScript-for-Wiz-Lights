@@ -26,23 +26,30 @@ async def parseCommand(cmd):
     cmd = cmd.split("//")[0] #Strips everything following "//" in a line, so "//" may be used to write comments in BulbScript scripts.
     cmd = cmd.lower() #Converts the line to lowercase to prepare it for further parsing
     splitCmd = cmd.split(" ") #Splits the string by space to prepare for further parsing
-    if splitCmd[0] == "end" and splitCmd[1] == "if" and skip == True:
-        skip = False 
+    
+    if splitCmd[0] == "end" and splitCmd[1] == "if" and skip == True: #Checks if the first word in the splitCmd list is "end", then checks if
+        #the second word is "if", marking the end of an if statement.
+        skip = False #Sets the skip variable to false, making the interpreter stop ignoring future lines of BulbScript code.
+        
     if skip: return
-    if recordCode: funcCode.append(cmd)    
+    
+    if recordCode: funcCode.append(cmd) #Appends lines of BulbScript code to the funcCode list if a function has been declared    
     if splitCmd[0] == "func":
-        funcName = splitCmd[1]
-        recordCode = True                           
+        funcName = splitCmd[1] #Sets the function name to the first word after a space
+        recordCode = True #A function has been declared, so recordCode is now true
+        #all lines of code until an 'end func' statement will be appended into the funcCode list.
     if splitCmd[0] == "end" and splitCmd[1] == "func":
-        funcCode.pop(-1)
-        bulbFunctions.addFunction(funcName, funcCode)
-        funcCode = []
+        funcCode.pop(-1) #Removes the last entry in the funcCode list. The last entry will always be 'end func', and we don't want that
+        bulbFunctions.addFunction(funcName, funcCode) #Adds the function to the function list in bulbFunctions
+        funcCode = [] 
         recordCode = False
-    if splitCmd[0] == "call":
-        bulbFunction = bulbFunctions.getFunction(splitCmd[1])[1]    
-        if len(splitCmd) == 3 and splitCmd[2] != "":
-            for i in range(0, int(splitCmd[2])):
-                await parseCode(bulbFunction, True)  
+    if splitCmd[0] == "call": #Checks for a 'call' command, which is used to call a function
+        bulbFunction = bulbFunctions.getFunction(splitCmd[1])[1] #Gets the code of the function called. 
+        #bulbFunctions.getFunction takes a function name and returns ["Function Name", ["Function code]]
+        #The code above will store only the code in bulbFunction
+        if len(splitCmd) == 3 and splitCmd[2] != "": #Checks if there's a third argument, which would be used to call a function X amount of times
+            for i in range(0, int(splitCmd[2])): #Calls the function however many time specified. ex. "call testFunc 10" <- calls testFunc 10 times
+                await parseCode(bulbFunction, True) #Sends the function code to be parsed and ran, with runOnce set to True to prevent it from looping infinitely
             return        
         await parseCode(bulbFunction, True)
         
