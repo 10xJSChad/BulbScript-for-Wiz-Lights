@@ -21,8 +21,11 @@ async def initialize(script):
     
 async def parseCommand(cmd):
     global funcName, funcCode, recordCode, skip
+    
     cmd = stripSpaces(cmd) #Strips leading spaces
-    cmdUnchanged = cmd
+    cmdUnchanged = cmd #Stores the command before splitting & setting it to lowercase
+    #To be honest, I'm not entirely sure why I felt the need for this.
+    
     cmd = cmd.split("//")[0] #Strips everything following "//" in a line, so "//" may be used to write comments in BulbScript scripts.
     cmd = cmd.lower() #Converts the line to lowercase to prepare it for further parsing
     splitCmd = cmd.split(" ") #Splits the string by space to prepare for further parsing
@@ -54,6 +57,8 @@ async def parseCommand(cmd):
         await parseCode(bulbFunction, True)
         
     if not recordCode:
+        #Command parsing
+        
         if splitCmd[0] == "setrgb":
             await bulbSet.setRgb(bulbVariables.getAllVariablesFromRgbInput(cmd), bulbVariables.getVariable(splitCmd[1], True, True));
         if splitCmd[0] == "setbrightness":
