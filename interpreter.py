@@ -9,7 +9,7 @@ from user_functions import customFunctions
 funcName = ""
 funcCode = []
 recordCode = False
-skip = False
+skip = 0
 
 #Strips leading spaces
 def stripSpaces(cmd):
@@ -30,12 +30,13 @@ async def parseCommand(cmd):
     cmd = cmd.lower() #Converts the line to lowercase to prepare it for further parsing
     splitCmd = cmd.split(" ") #Splits the string by space to prepare for further parsing
     
-    if splitCmd[0] == "end" and splitCmd[1] == "if" and skip == True: #Checks if the first word in the splitCmd list is "end", then checks if
-        #the second word is "if", marking the end of an if statement.
-        skip = False #Sets the skip variable to false, making the interpreter stop ignoring future lines of BulbScript code.
+    if splitCmd[0] == "if" and skip > 0: #Increments the skip variable, this is needed for nested conditionals to work
+        skip += 1 
+    if splitCmd[0] == "end" and splitCmd[1] == "if" and skip > 0: #Decrements it on an "end if" statement
+        skip -= 1 
         
-    if skip: return
-    
+    if skip > 0: return
+
     if recordCode: funcCode.append(cmd) #Appends lines of BulbScript code to the funcCode list if a function has been declared    
     if splitCmd[0] == "func":
         funcName = splitCmd[1] #Sets the function name to the first word after a space
@@ -94,7 +95,7 @@ async def parseCommand(cmd):
         if splitCmd[0] == "stop":
             return "stop"
         if splitCmd[0] == "if":
-            skip = not (bulbVariables.compareVariable(splitCmd[1], splitCmd[3], splitCmd[2]))     
+            if not (bulbVariables.compareVariable(splitCmd[1], splitCmd[3], splitCmd[2])): skip += 1 
     
 async def parseCode(codeToParse, runOnce=False):
     loop = True
