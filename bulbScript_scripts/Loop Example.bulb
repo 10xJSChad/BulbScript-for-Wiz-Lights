@@ -5,13 +5,13 @@ var i
 func loop //Start of function
 
 if i < 11 //Start of if statement
-add i 1 //This function will keep recursively calling itself and adding 1 to i for as long as i is less than 11
-call loop
+    add i 1 //This function will keep recursively calling itself and adding 1 to i for as long as i is less than 11
+    call loop
 end if //End of if statement
 
 end func //End of function
 
-mov i 0 
+set i 0 
 call loop //Calls the loop function
 
 stop
