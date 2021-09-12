@@ -1,6 +1,6 @@
 //This script uses a custom Python functions found in /user_functions/customFunctions.py
 var newInt = 50
 exec exampleFunction(newInt) //Runs the example function with the value of newInt as an argument
-mov newInt returned //Sets newInt to the returned value of exampleFunction
+set newInt returned //Sets newInt to the returned value of exampleFunction
 print *newInt* //Prints out the value of newInt
 stop

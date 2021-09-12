@@ -79,7 +79,7 @@ async def parseCommand(cmd):
                 varValue = varValue.replace(" ", "")
             else: varValue = ""
             bulbVariables.addVariable(varName, varValue)
-        if splitCmd[0] == "mov":
+        if splitCmd[0] == "mov" or splitCmd[0] == "set":
             bulbVariables.setVariable(splitCmd[1], splitCmd[2])
         if splitCmd[0] == "add":
             bulbVariables.addToVariable(splitCmd[1], splitCmd[2])
