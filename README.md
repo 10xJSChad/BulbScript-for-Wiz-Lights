@@ -76,10 +76,10 @@ var exampleFloatVariable = 5.5
 var exampleStringVariable = Hello World!
 ```
 
-**mov *variable* *'variable/value'*** <br>
+**set *variable* *'variable/value'*** <br>
 ```
-mov exampleIntVariable 50 //Sets the value of exampleIntVariable to 50 
-mov exampleIntVariable exampleFloatVariable //Sets the value of exampleIntVariable to the value of exampleFloatVariable 
+set exampleIntVariable 50 //Sets the value of exampleIntVariable to 50 
+set exampleIntVariable exampleFloatVariable //Sets the value of exampleIntVariable to the value of exampleFloatVariable 
 ```
 
 **add *variable* *'variable/value'*** <br>
@@ -108,8 +108,8 @@ rnd exampleIntVariable 0 500 //Sets the value of exampleIntVariable to a random 
 *Supported operators:* ==, >=, <=, >, <, !=
 ```
 if x == 255 //Checks if x is equal to 255
-mov y x //Sets the value of y to the value of x (255)
-mov x 0  //Sets x to 0
+set y x //Sets the value of y to the value of x (255)
+set x 0  //Sets x to 0
 end if //Ends the if statement
 ```
 **func**, **end func**, and **call** //Starts, ends, and calls a function <br>
