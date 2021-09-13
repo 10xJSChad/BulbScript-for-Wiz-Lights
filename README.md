@@ -108,15 +108,15 @@ rnd exampleIntVariable 0 500 //Sets the value of exampleIntVariable to a random 
 *Supported operators:* ==, >=, <=, >, <, !=
 ```
 if x == 255 //Checks if x is equal to 255
-set y x //Sets the value of y to the value of x (255)
-set x 0  //Sets x to 0
+ set y x //Sets the value of y to the value of x (255)
+ set x 0  //Sets x to 0
 end if //Ends the if statement
 ```
 **func**, **end func**, and **call** //Starts, ends, and calls a function <br>
 
 ```
 func lightsOff
-setoff all
+ setoff all
 end func
 
 call lightsOff //calls lightsOff once, 'call lightsOff 2' would call it twice.
