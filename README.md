@@ -90,7 +90,7 @@ add exampleIntVariable anotherIntVariable //Adds the value of anotherIntVariable
 
 **sub *variable* *'variable/value'*** //Same as add but for subtraction <br>
 
-**exec *functionName()*** //Executes a Python function from /user_functions/customFunctions.py <br<
+**exec *functionName()*** //Executes a Python function from /user_functions/customFunctions.py <br>
 //Note: The default BulbScript variable 'returned' will be set to whatever the custom function returns
 
 **print** //Prints out whatever comes after it <br>
