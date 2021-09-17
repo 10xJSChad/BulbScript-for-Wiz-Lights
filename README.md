@@ -61,7 +61,7 @@ setwhite all cold 255 //Sets all lights to a cold white with a brightness value 
 
 **setoff *'all/index of light'*** <br>
 ```
-setoff all //Turns all the lights off <br>
+setoff all //Turns all the lights off
 ```
 
 **slp *float*** <br>
