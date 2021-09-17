@@ -39,12 +39,12 @@ The interpreter expects you to write your code formatted exactly as in the examp
 
 **setrgb *'all/index of light'* (R, G, B)** <br>
 ```
-setrgb all (255, 255, 255) //Sets the rgb value of all lights to (255, 255, 255) <br>
+setrgb all (255, 255, 255) //Sets the rgb value of all lights to (255, 255, 255) 
 ```
 
 **setbrightness *'all/index of light'* *'int 1-255'*** <br>
 ```
-setbrightness 1 50 //Sets the brightness value of the light at the index of 1 to 50 <br>
+setbrightness 1 50 //Sets the brightness value of the light at the index of 1 to 50 
 ```
 
 **setscene *'all/index of light'* *'int 1-255'*** <br>
@@ -55,8 +55,8 @@ Supported scenes can be found [here](https://github.com/sbidy/pywizlight/blob/ma
 
 **setwhite *'all/index of light'* *warm/cold* *'int 1-255'*** <br>
 ```
-setwhite all warm 50 //Sets all lights to a warm white with a brightness value of 50 <br>
-setwhite all cold 255 //Sets all lights to a cold white with a brightness value of 255 <br>
+setwhite all warm 50 //Sets all lights to a warm white with a brightness value of 50 
+setwhite all cold 255 //Sets all lights to a cold white with a brightness value of 255 
 ```
 
 **setoff *'all/index of light'*** <br>
@@ -66,7 +66,7 @@ setoff all //Turns all the lights off <br>
 
 **slp *float*** <br>
 ```
-slp 0.5 //Waits for half a second before continuing <br>
+slp 0.5 //Waits for half a second before continuing 
 ```
 
 **var *varName*** <br>
