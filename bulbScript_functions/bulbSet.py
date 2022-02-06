@@ -12,7 +12,7 @@ async def initialize(broadcastSpace):
     #Add all bulbs to an unsorted list
     bulbsUnsorted = await discovery.discover_lights(broadcast_space=broadcastSpace)
     
-    #Sorts all the bulbs alphabetically and appends them to a new list
+    #Sorts all the bulbs and appends them to a new list
     for x in bulbsUnsorted:
         unsortedIPs.append(x.ip)
         
