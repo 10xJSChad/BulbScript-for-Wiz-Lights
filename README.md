@@ -18,7 +18,7 @@ This script and several other example scripts can be found in /BulbScript_script
 1. Configure your broadcast space in config.py. (Default: "192.168.1.255") <br>
 2. Run interpreter.py, this will execute the default BulbCode.bulb script. If your lights start slowly turning off and on, your broadcast space is set correctly. <br>
 3. Create your own BulbScript script! Simply navigate to the /bulbScript_scripts directory and create a new .bulb file. Then open it in your favorite text editor and start coding! Make sure to read the documentation below and check out the other example script in the /bulbScript_scripts directory if you're struggling.<br>
-4. Set the "loadedScript" variable in config.py to your new bulb script, and run interpreter.py. If everything is configured correctly, your script will be successfully executed. The script will infinitely loop until it hits a "stop" command. <br>
+4. Set the "loadedScript" variable in config.py to your new bulb script, and run interpreter.py. If everything is configured correctly, your script will be successfully executed. The script will infinitely loop until it hits a "stop" command. Alternatively you can load a script by passing its name (not path, it **MUST** be in bulbScript_scripts!) as the first argument to interpreter.py <br>
  
 <h3>Note: BulbScript now supports indentation in scripts!</h3> <br>
 

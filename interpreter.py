@@ -145,6 +145,9 @@ async def parseCode(codeToParse, runOnce=False):
         for cmd in lines: 
             if (await parseCommand(cmd)) == "stop": loop = False; return
      
+
 sys.path.append('/bulbScript_functions')
 sys.path.append('/user_functions')
-asyncio.run(initialize(open("bulbScript_scripts/" + config.loadedScript, "r")))
+
+script_name = "DefaultScript.bulb" if len(sys.argv) == 1 else sys.argv[1]
+asyncio.run(initialize(open("bulbScript_scripts/" + script_name, "r")))
